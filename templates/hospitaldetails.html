@@ -1,0 +1,62 @@
+{% extends "hosnavbar.html" %}
+{% block title %}
+Hospital Details
+{% endblock title %}
+{% block body %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col-md-4"></div>
+    
+    <div class="col-md-4">
+    
+    
+    
+    <div>
+        
+    
+        <table class="table">
+            <thead class="table-dark text-center">
+              <tr>
+                <th scope="col">HOSPITAL DATA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+               <td>Hospital Code : <b>{{data.hcode}}</b></td>
+              </tr>
+              <tr>
+                <td>Hospital Name : <b>{{data.hname}}</b></td>
+              </tr>
+              <tr>
+                <td>Normal Beds Available :<b>{{data.normalbed}}</td>
+              </tr>
+              <tr>
+                <td>H.I.C.U Beds Available: <b>{{data.hicubed}}</td>
+              </tr>
+              <tr>
+                <td>I.C.U Beds Available :<b>{{data.icubed}}</td>
+              </tr>
+              <tr>
+                <td>Ventilators Beds Available : <b>{{data.vbed}}</b></td>
+              </tr>
+            </tbody>
+          </table>
+          <li class="list-group-item"><a href="/hedit/{{data.id}}"><i class="fas fa-edit"></i></a> </i>
+                  
+            <a class="ml-4"  confirm('Are You Sure To Delete The Data') href="/hdelete/{{data.id}}"><i class="fas fa-trash-alt"></i>                    </li>
+    
+    </div>
+    </div>
+    
+    
+    <div class="col-md-4"></div>
+    
+    </div>
+    
+{% endblock body %}

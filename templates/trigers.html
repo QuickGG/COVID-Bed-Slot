@@ -1,0 +1,49 @@
+{% extends "adminnav.html" %} {% block title %}Triggered Data{% endblock title %}
+{% block body %}
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="container mt-4">
+ 
+    <div class="col-md-12">
+    
+    <table class="table">
+  <thead>
+  <h3 class="text-center text-white bg-dark">Hospital Data Operations</h3>
+    <tr>
+      
+      <th scope="col">Hospital Code</th>
+      <th scope="col">Normal Bed</th>
+      <th scope="col">HICU Bed</th>
+      <th scope="col">I.C.U Bed</th>
+      <th scope="col">Ventilator Bed</th>
+      <th scope="col">Query</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for post in query %}
+   <tr>
+      <td>{{post.hcode}}</td>
+      <td>{{post.normalbed}}</td>
+      <td>{{post.hicubed}}</td>
+      <td>{{post.icubed}}</td>
+      <td>{{post.vbed}}</td>
+      <td>{{post.query}}</td>
+      <td>{{post.date}}</td>
+    </tr>
+   
+  {% endfor %}
+   
+  </tbody>
+</table>
+    
+    </div>
+  </div>
+</div>
+
+</div>
+
+{% endblock body %}
